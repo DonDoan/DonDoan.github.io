@@ -1,37 +1,82 @@
-## Welcome to GitHub Pages
-
-You can use the [editor on GitHub](https://github.com/DonDoan/DonDoan.github.io/edit/main/README.md) to maintain and preview the content for your website in Markdown files.
-
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
-
-### Markdown
-
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
-
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [Basic writing and formatting syntax](https://docs.github.com/en/github/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/DonDoan/DonDoan.github.io/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+<html>
+<!--This example uses the default bootstrap stylesheet-->
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<!--provides a full-width container that can expand or collapse based on the size of viewport-->
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-2 col-sm-12 col-xs-12">
+            <nav id="navbar">
+                <h3>Technical Documentation</h3>
+                <!--content stacking for smaller screens-->
+                <ul class="nav nav-pills nav-stacked">
+                 <!--internal linking to the respective sections-->
+                    <a class="nav-link" href="#Introduction" rel="internal">
+                        <li>Introduction</li>
+                    </a>
+                    <a class="nav-link" href="#What_you_should_already_know" rel="internal">
+                        <li>What you should already know</li>
+                    </a>
+                    <a class="nav-link" href="#About_Topic" rel="internal">
+                        <li>About the topic</li>
+                    </a>
+                    <a class="nav-link" href="#Topic_1" rel="internal">
+                        <li>Topic 1</li>
+                    </a>
+                    <a class="nav-link" href="#Topic_2" rel="internal">
+                        <li>Topic 2</li>
+                    </a>
+                 </ul>
+            </nav>
+        </div>
+        <div class="col-md-10 col-sm-12 col-xs-12">
+            <main id="main-doc">
+                <section class="main-section" id="Introduction" >
+                 <!--basic styling for the headings, better practice to do the same in a css file as the styling is same for all headers-->
+                    <h3 style = "background: black; color: white">Introduction</h3>
+                    <article>
+                    <p>Some content about the main topic, for example Java documentation introduction about the language
+                        </article>
+                </section>
+                <section class="main-section" id="What_you_should_already_know">
+                    <h3 style = "background: black; color: white">What you should already know</h3>
+                    <article>
+                        <p>Background information before getting into the topic:</p>
+<!--creating list using html-->
+                        <li>Some list content</li>
+                        <li>Prerequisites.</li>
+                        <li>Workings and assumptions</li>
+                        <p>Any other content to be covered before learning this topic</p>
+                        </artice>
+                </section>
+                <section class="main-section" id="About_Topic">
+                    <h3 style = "background: black; color: white">About topic</h3>
+                    <article>
+                        <p>More lines about the topic. For example, how the basic functionality works, features etc...</p>
+                        <p>
+                        Technical documentation should be thorough and to the point
+                        </p>
+                        <p>
+                        Write about features, comparisons with other languages etc
+                        </p>
+                    </article>
+                </section>
+                <section class="main-section" id="Topic_1">
+                    <h3 style = "background: black; color: white">Topic 1</h3>
+                    <article>
+                        Getting started with the actual documentation content
+                        <code>This would come in a different color and font indicating lines of code
+                        </code>
+                    </article>
+                </section>
+                <section class="main-section" id="Topic_2">
+                    <h3 style = "background: black; color: white">Topic 2</h3>
+                    <p>
+Another topic about the main topic, for example, if the topic is Java, this could be variables or data types in Java
+                    </p>
+                </section>
+            </main>
+        </div>
+    </div>
+</div>
+</html>
