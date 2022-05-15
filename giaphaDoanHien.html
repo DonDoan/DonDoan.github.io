@@ -1,315 +1,345 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-<style>
-ul, #myUL {
-  list-style-type: none;
-}
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    ul,
+    #myUL {
+      list-style-type: none;
+    }
 
-#myUL {
-  margin: 0;
-  padding: 0;
-}
+    #myUL {
+      margin: 0;
+      padding: 0;
+    }
 
-.caret {
-  cursor: pointer;
-  -webkit-user-select: none; /* Safari 3.1+ */
-  -moz-user-select: none; /* Firefox 2+ */
-  -ms-user-select: none; /* IE 10+ */
-  user-select: none;
-}
+    .caret {
+      cursor: pointer;
+      -webkit-user-select: none;
+      /* Safari 3.1+ */
+      -moz-user-select: none;
+      /* Firefox 2+ */
+      -ms-user-select: none;
+      /* IE 10+ */
+      user-select: none;
+      font-weight: bold;
+    }
 
-.caret::before {
-  content: "\25B6";
-  color: black;
-  display: inline-block;
-  margin-right: 6px;
-}
+    .caret::before {
+      content: "\25B6";
+      color: black;
+      display: inline-block;
+      margin-right: 6px;
+    }
 
-.caret-down::before {
-  -ms-transform: rotate(90deg); /* IE 9 */
-  -webkit-transform: rotate(90deg); /* Safari */'
-  transform: rotate(90deg);  
-}
+    .caret-down::before {
+      -ms-transform: rotate(90deg);
+      /* IE 9 */
+      -webkit-transform: rotate(90deg);
+      /* Safari */
+      transform: rotate(90deg);
+    }
 
-.nested {
-  display: none;
-}
+    .nested {
+      display: none;
+    }
 
-.active {
-  display: block;
-}
-</style>
+    .nested_bold {
+      color: blue;
+      font-weight: bold;
+    }
+
+    .nested_bold_red {
+      color: red;
+      font-weight: bold;
+    }
+
+    .red-text {
+      color: rgb(174, 0, 255);
+      font-weight: bold;
+    }
+
+    .red1-text {
+      color: rgb(255, 0, 119);
+      font-weight: bold;
+    }
+
+    .active {
+      display: block;
+    }
+  </style>
 </head>
+
 <body>
 
-<h1>Giả Phả Nhà Ông Doãn Hiền</h1>
-<h2>Ngày Giỗ Ông Nội (9/10 Âm Lịch hằng năm)</h2>
-<h2>Ngày Giỗ Cô 6 (28 tháng Chạp hằng năm)</h2>
-<!-- <p>A tree view represents a hierarchical view of information, where each item can have a number of subitems.</p> -->
-<!-- <p>A tree view represents a hierarchical view of information, where each item can have a number of subitems.</p> -->
-<p>Chọn vào mũi tên để mở hoặc đóng gia phả và xem.</p>
-<!-- <p>Click on the arrow(s) to open or close the tree branches.</p> -->
+  <h1>Giả Phả Nhà Ông Doãn Hiền</h1>
+  <h3 class="red-text">Ngày Giỗ Ông Nội (9/10 Âm Lịch hằng năm)</h3>
+  <h3 class="red-text">Ngày Giỗ Cô 6 (28 tháng Chạp hằng năm)</h3>
+  <!-- <p>A tree view represents a hierarchical view of information, where each item can have a number of subitems.</p> -->
+  <!-- <p>A tree view represents a hierarchical view of information, where each item can have a number of subitems.</p> -->
+  <p class="red1-text">Chọn vào mũi tên để mở hoặc đóng gia phả và xem.</p>
+  <!-- <p>Click on the arrow(s) to open or close the tree branches.</p> -->
 
-<ul id="myUL">
-  <li><span class="caret">Ông Bà Doãn Hiền/Ngô Thị Hường</span>
-    <ul class="nested">
-      <!-- <li>Water</li>
+  <ul id="myUL">
+    <li><span class="caret">Ông Bà Doãn Hiền/Ngô Thị Hường</span>
+      <ul class="nested_bold_red">
+        <!-- <li>Water</li>
       <li>Coffee</li> -->
-      <li><span class="caret">Cô Hai (Doãn Thị Hiền) + Dượng 2</span>
-        <ul class="nested">
-          <!-- <li>Anh 2 Chung + chị 2 Điện</li>
+        <li><span class="caret">Cô Hai (Doãn Thị Hiền) + Dượng 2</span>
+          <ul class="nested_bold">
+            <!-- <li>Anh 2 Chung + chị 2 Điện</li>
           <li>White Tea</li> -->
-          <li><span class="caret">Anh 2 Chung + Chị 2 Điện</span>
-            <ul class="nested">
-              <li>Bé Ngọc</li>
-              <li>Bé Như</li>
-              <li>Bé Út</li>
-              <!-- <li>Pi Lo Chun</sli> -->
-            </ul>
-          </li>          
-          <li><span class="caret">Chị 3 Toàn + Anh Vương (*)</span>
-            <ul class="nested">
-              <li>Bé Thi</li>
-              <li>Bé Thùy</li>
-              <li>Bé Út</li>
-              <!-- <li>Pi Lo Chun</sli> -->
-            </ul>
-          </li>          
-          <li><span class="caret">Anh Bộ + Chị Thơm</span>
-            <ul class="nested">
-              <li>Bé lớn</li>
-              <li>Bé nhỏ</li>
-              <!-- <li>Bé Út</li> -->
-              <!-- <li>Pi Lo Chun</sli> -->
-            </ul>
-          </li>
-        </ul>
-      </li> 
-      <li><span class="caret">Bác 3 Hậu + Bác 3 Gái</span>
-        <ul class="nested">
-          <!-- <li>Anh 2 Chung + chị 2 Điện</li>
-          <li>White Tea</li> -->
-          <li><span class="caret">Chị 2 Thúy + Anh Đại</span>
-            <ul class="nested">
-              <li>Bé Hương</li>
-              <li>Cu Út</li>
-              <!-- <li>Bé Út</li> -->
-              <!-- <li>Pi Lo Chun</sli> -->
-            </ul>
-          </li>          
-          <li><span class="caret">Anh 3 Vân + Chị Vũ</span>
-            <ul class="nested">
-              <li>Cu Vỹ</li>
-              <li>Bé Viên</li>
-              <li>Cu Út</li>
-              <!-- <li>Pi Lo Chun</sli> -->
-            </ul>
-          </li>          
-          <li><span class="caret">Chị 4 Tuyết + Anh Liêu</span>
-            <ul class="nested">
-              <li>Bé lớn</li>
-              <li>Bé nhì</li>
-              <li>Bé nhỏ</li>
-              <!-- <li>Bé Út</li> -->
-              <!-- <li>Pi Lo Chun</sli> -->
-            </ul>
-          </li>
-          <li><span class="caret">Chị Nữ + Anh Hùng</span>
-            <ul class="nested">
-              <li>Cu đầu</li>
-              <!-- <li>Bé nhì</li>
-              <li>Bé nhỏ</li> -->
-              <!-- <li>Bé Út</li> -->
-              <!-- <li>Pi Lo Chun</sli> -->
-            </ul>
-          </li>
-        </ul>
-      </li>  
-      <li><span class="caret">Cô 4 Phương + Dượng 4 (*)</span>
-        <ul class="nested">
-          <!-- <li>Anh 2 Chung + chị 2 Điện</li>
-          <li>White Tea</li> -->
-          <li><span class="caret">Chị 2 Hướng + Anh 2 Hà</span>
-            <ul class="nested">
-              <li>Bé Linh</li>
-              <li>Cu Muối</li>
-              <!-- <li>Bé Út</li> -->
-              <!-- <li>Pi Lo Chun</sli> -->
-            </ul>
-          </li>          
-          <li><span class="caret">Chị 3 Hướng Em + Anh Hải</span>
-            <ul class="nested">
-              <li>Cu Win</li>
-              <li>Cu Rin</li>
-              <!-- <li>Cu Út</li> -->
-              <!-- <li>Pi Lo Chun</sli> -->
-            </ul>
-          </li>          
-          <li><span class="caret">Anh 4 Huy + Chị Quyên</span>
-            <ul class="nested">
-              <li>Cu Bo</li>
-              <!-- <li>Bé nhì</li>
-              <li>Bé nhỏ</li> -->
-              <!-- <li>Bé Út</li> -->
-              <!-- <li>Pi Lo Chun</sli> -->
-            </ul>
-          </li>          
-          <li><span class="caret">Anh Luận + Chị Lệ</span>
-            <ul class="nested">
-              <li>Bé Mít</li>
-              <!-- <li>Bé nhì</li>
-              <li>Bé nhỏ</li> -->
-              <!-- <li>Bé Út</li> -->
-              <!-- <li>Pi Lo Chun</sli> -->
-            </ul>
-          </li>
-        </ul>
-    </li> 
-    <li><span class="caret">Cô 5 Phượng + Dượng 5 (*)</span>
-        <ul class="nested">
-        <!-- <li>Anh 2 Chung + chị 2 Điện</li>
-        <li>White Tea</li> -->
-        <li><span class="caret">Chị 2 Anh + Anh Được</span>
-            <ul class="nested">
-            <li>Bé lớn</li>
-            <li>Bé nhỏ</li>
-            <!-- <li>Bé Út</li> -->
-            <!-- <li>Pi Lo Chun</sli> -->
-            </ul>
-        </li>          
-        <li><span class="caret">Anh Tuấn + Chị Vinh</span>
-            <ul class="nested">
-            <li>Bé đầu</li>
-            <li>Cu nhỏ</li>
-            <!-- <li>Cu Út</li> -->
-            <!-- <li>Pi Lo Chun</sli> -->
-            </ul>
-        </li>          
-        <li><span class="caret">Anh Vương + Chị 4</span>
-            <ul class="nested">
-            <!-- <li>Cu Bo</li> -->
-            <!-- <li>Bé nhì</li>
-            <li>Bé nhỏ</li> -->
-            <!-- <li>Bé Út</li> -->
-            <!-- <li>Pi Lo Chun</sli> -->
-            </ul>
-        </li>          
-        <li><span class="caret">Anh Sang</span>
-            <ul class="nested">
-            <!-- <li>Bé Mít</li> -->
-            <!-- <li>Bé nhì</li>
-            <li>Bé nhỏ</li> -->
-            <!-- <li>Bé Út</li> -->
-            <!-- <li>Pi Lo Chun</sli> -->
-            </ul>
+            <li><span class="caret">Anh 2 Chung + Chị 2 Điện</span>
+              <ul class="nested">
+                <li>Bé Ngọc</li>
+                <li>Bé Như</li>
+                <li>Bé Út</li>
+                <!-- <li>Pi Lo Chun</sli> -->
+              </ul>
+            </li>
+            <li><span class="caret">Chị 3 Toàn + Anh Vương (*)</span>
+              <ul class="nested">
+                <li>Bé Thi</li>
+                <li>Bé Thùy</li>
+                <li>Bé Út</li>
+                <!-- <li>Pi Lo Chun</sli> -->
+              </ul>
+            </li>
+            <li><span class="caret">Anh Bộ + Chị Thơm</span>
+              <ul class="nested">
+                <li>Bé lớn</li>
+                <li>Bé nhỏ</li>
+                <!-- <li>Bé Út</li> -->
+                <!-- <li>Pi Lo Chun</sli> -->
+              </ul>
+            </li>
+          </ul>
         </li>
-        </ul>
-    </li>  
-    <li><span class="caret">Cô 6 (*)</span>
-        <ul class="nested">
-        </ul>
-    </li>
-    <li><span class="caret">Bác 7 Ba Đông + Má Kính</span>
-        <ul class="nested">
-        <!-- <li>Anh 2 Chung + chị 2 Điện</li>
+        <li><span class="caret">Bác 3 Hậu + Bác 3 Gái</span>
+          <ul class="nested_bold">
+            <!-- <li>Anh 2 Chung + chị 2 Điện</li>
+          <li>White Tea</li> -->
+            <li><span class="caret">Chị 2 Thúy + Anh Đại</span>
+              <ul class="nested">
+                <li>Bé Hương</li>
+                <li>Cu Út</li>
+                <!-- <li>Bé Út</li> -->
+                <!-- <li>Pi Lo Chun</sli> -->
+              </ul>
+            </li>
+            <li><span class="caret">Anh 3 Vân + Chị Vũ</span>
+              <ul class="nested">
+                <li>Cu Vỹ</li>
+                <li>Bé Viên</li>
+                <li>Cu Út</li>
+                <!-- <li>Pi Lo Chun</sli> -->
+              </ul>
+            </li>
+            <li><span class="caret">Chị 4 Tuyết + Anh Liêu</span>
+              <ul class="nested">
+                <li>Bé lớn</li>
+                <li>Bé nhì</li>
+                <li>Bé nhỏ</li>
+                <!-- <li>Bé Út</li> -->
+                <!-- <li>Pi Lo Chun</sli> -->
+              </ul>
+            </li>
+            <li><span class="caret">Chị Nữ + Anh Hùng</span>
+              <ul class="nested">
+                <li>Cu đầu</li>
+                <!-- <li>Bé nhì</li>
+              <li>Bé nhỏ</li> -->
+                <!-- <li>Bé Út</li> -->
+                <!-- <li>Pi Lo Chun</sli> -->
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li><span class="caret">Cô 4 Phương + Dượng 4 (*)</span>
+          <ul class="nested_bold">
+            <!-- <li>Anh 2 Chung + chị 2 Điện</li>
+          <li>White Tea</li> -->
+            <li><span class="caret">Chị 2 Hướng + Anh 2 Hà</span>
+              <ul class="nested">
+                <li>Bé Linh</li>
+                <li>Cu Muối</li>
+                <!-- <li>Bé Út</li> -->
+                <!-- <li>Pi Lo Chun</sli> -->
+              </ul>
+            </li>
+            <li><span class="caret">Chị 3 Hướng Em + Anh Hải</span>
+              <ul class="nested">
+                <li>Cu Win</li>
+                <li>Cu Rin</li>
+                <!-- <li>Cu Út</li> -->
+                <!-- <li>Pi Lo Chun</sli> -->
+              </ul>
+            </li>
+            <li><span class="caret">Anh 4 Huy + Chị Quyên</span>
+              <ul class="nested">
+                <li>Cu Bo</li>
+                <!-- <li>Bé nhì</li>
+              <li>Bé nhỏ</li> -->
+                <!-- <li>Bé Út</li> -->
+                <!-- <li>Pi Lo Chun</sli> -->
+              </ul>
+            </li>
+            <li><span class="caret">Anh Luận + Chị Lệ</span>
+              <ul class="nested">
+                <li>Bé Mít</li>
+                <!-- <li>Bé nhì</li>
+              <li>Bé nhỏ</li> -->
+                <!-- <li>Bé Út</li> -->
+                <!-- <li>Pi Lo Chun</sli> -->
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li><span class="caret">Cô 5 Phượng + Dượng 5 (*)</span>
+          <ul class="nested_bold">
+            <!-- <li>Anh 2 Chung + chị 2 Điện</li>
         <li>White Tea</li> -->
-        <li><span class="caret">Anh 2 Đô + Chị 2 Thương</span>
-            <ul class="nested">
-            <li>Sóc Già</li>
-            <!-- <li>Cu nhỏ</li> -->
-            <!-- <li>Bé Út</li> -->
-            <!-- <li>Pi Lo Chun</sli> -->
-            </ul>
-        </li>          
-        <li><span class="caret">Anh 3 Đôn + Chị Hằng</span>
-            <ul class="nested">
-            <li>Conan</li>
-            <!-- <li>Bé Viên</li>
+            <li><span class="caret">Chị 2 Anh + Anh Được</span>
+              <ul class="nested">
+                <li>Bé lớn</li>
+                <li>Bé nhỏ</li>
+                <!-- <li>Bé Út</li> -->
+                <!-- <li>Pi Lo Chun</sli> -->
+              </ul>
+            </li>
+            <li><span class="caret">Anh Tuấn + Chị Vinh</span>
+              <ul class="nested">
+                <li>Bé đầu</li>
+                <li>Cu nhỏ</li>
+                <!-- <li>Cu Út</li> -->
+                <!-- <li>Pi Lo Chun</sli> -->
+              </ul>
+            </li>
+            <li><span class="caret">Anh Vương + Chị 4</span>
+              <ul class="nested">
+                <!-- <li>Cu Bo</li> -->
+                <!-- <li>Bé nhì</li>
+            <li>Bé nhỏ</li> -->
+                <!-- <li>Bé Út</li> -->
+                <!-- <li>Pi Lo Chun</sli> -->
+              </ul>
+            </li>
+            <li><span class="caret">Anh Sang</span>
+              <ul class="nested">
+                <!-- <li>Bé Mít</li> -->
+                <!-- <li>Bé nhì</li>
+            <li>Bé nhỏ</li> -->
+                <!-- <li>Bé Út</li> -->
+                <!-- <li>Pi Lo Chun</sli> -->
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li><span class="caret">Cô 6 (*)</span>
+          <ul class="nested">
+          </ul>
+        </li>
+        <li><span class="caret">Bác 7 Ba Đông + Má Kính</span>
+          <ul class="nested_bold">
+            <!-- <li>Anh 2 Chung + chị 2 Điện</li>
+        <li>White Tea</li> -->
+            <li><span class="caret">Anh 2 Đô + Chị 2 Thương</span>
+              <ul class="nested">
+                <li>Sóc Già</li>
+                <!-- <li>Cu nhỏ</li> -->
+                <!-- <li>Bé Út</li> -->
+                <!-- <li>Pi Lo Chun</sli> -->
+              </ul>
+            </li>
+            <li><span class="caret">Anh 3 Đôn + Chị Hằng</span>
+              <ul class="nested">
+                <li>Conan</li>
+                <!-- <li>Bé Viên</li>
             <li>Cu Út</li> -->
-            <!-- <li>Pi Lo Chun</sli> -->
-            </ul>
-        </li>          
-        </ul>
-    </li>  
-    <lsi><span class="caret">Chú 8 Thiện + Nguyệt</span>
-        <ul class="nested">
-        <!-- <li>Anh 2 Chung + chị 2 Điện</li>
+                <!-- <li>Pi Lo Chun</sli> -->
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <lsi><span class="caret">Chú 8 Thiện + Nguyệt</span>
+          <ul class="nested_bold">
+            <!-- <li>Anh 2 Chung + chị 2 Điện</li>
         <li>White Tea</li> -->
-        <!-- <li>Cu Sơn</li> -->
-        <li><span class="caret">Cu Sơn</span>
-            <ul class="nested">
-            <!-- <li>Bé lớn</li>
+            <!-- <li>Cu Sơn</li> -->
+            <li><span class="caret">Cu Sơn</span>
+              <ul class="nested">
+                <!-- <li>Bé lớn</li>
             <li>Cu nhỏ</li> -->
-            <!-- <li>Bé Út</li> -->
-            <!-- <li>Pi Lo Chun</sli> -->
-            </ul>
-        </li>         
-        <li><span class="caret">Bé Oanh + Thương</span>
-            <ul class="nested">
-            <li>Bé lớn</li>
-            <li>Cu nhỏ</li>
-            <!-- <li>Bé Út</li> -->
-            <!-- <li>Pi Lo Chun</sli> -->
-            </ul>
-        </li>          
-        <li><span class="caret">Bé Hằng</span>
-            <ul class="nested">
-            <!-- <li>Cu Vỹ</li>
+                <!-- <li>Bé Út</li> -->
+                <!-- <li>Pi Lo Chun</sli> -->
+              </ul>
+            </li>
+            <li><span class="caret">Bé Oanh + Thương</span>
+              <ul class="nested">
+                <li>Bé lớn</li>
+                <li>Cu nhỏ</li>
+                <!-- <li>Bé Út</li> -->
+                <!-- <li>Pi Lo Chun</sli> -->
+              </ul>
+            </li>
+            <li><span class="caret">Bé Hằng</span>
+              <ul class="nested">
+                <!-- <li>Cu Vỹ</li>
             <li>Bé Viên</li>
             <li>Cu Út</li> -->
-            <!-- <li>Pi Lo Chun</sli> -->
-            </ul>
-        </li>          
-        </ul>
-    </li>  
+                <!-- <li>Pi Lo Chun</sli> -->
+              </ul>
+            </li>
+          </ul>
+    </li>
     <li><span class="caret">Chú Út Đáo + Búp</span>
-        <ul class="nested">
+      <ul class="nested_bold">
         <!-- <li>Anh 2 Chung + chị 2 Điện</li>
         <li>White Tea</li> -->
         <!-- <li>Cu Sơn</li> -->
         <li><span class="caret">Để + vợ Để</span>
-            <ul class="nested">
+          <ul class="nested">
             <li>Bé lớn</li>
             <!-- <li>Cu nhỏ</li> -->
             <!-- <li>Bé Út</li> -->
             <!-- <li>Pi Lo Chun</sli> -->
-            </ul>
-        </li>          
+          </ul>
+        </li>
         <li><span class="caret">Sen + Mẫn</span>
-            <ul class="nested">
+          <ul class="nested">
             <li>Cu Tí</li>
             <!-- <li>Cu Vỹ</li>
             <li>Bé Viên</li>
             <li>Cu Út</li> -->
             <!-- <li>Pi Lo Chun</sli> -->
-            </ul>
-        </li>          
+          </ul>
+        </li>
         <li><span class="caret">Đài</span>
-            <ul class="nested">
+          <ul class="nested">
             <!-- <li>Bé lớn</li>
             <li>Bé nhì</li>
             <li>Bé nhỏ</li> -->
             <!-- <li>Bé Út</li> -->
             <!-- <li>Pi Lo Chun</sli> -->
-            </ul>
-        </li>          
-    </ul>
-  </li>
-</ul>
-<script>
-var toggler = document.getElementsByClassName("caret");
-var i;
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+  <script>
+    var toggler = document.getElementsByClassName("caret");
+    var i;
 
-for (i = 0; i < toggler.length; i++) {
-  toggler[i].addEventListener("click", function() {
-    this.parentElement.querySelector(".nested").classList.toggle("active");
-    this.classList.toggle("caret-down");
-  });
-}
-</script>
+    for (i = 0; i < toggler.length; i++) {
+      toggler[i].addEventListener("click", function () {
+        this.parentElement.querySelector(".nested").classList.toggle("active");
+        this.classList.toggle("caret-down");
+      });
+    }
+  </script>
 
 </body>
+
 </html>
